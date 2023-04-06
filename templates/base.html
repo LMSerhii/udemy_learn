@@ -1,19 +1,70 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/external.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
-<!--    header-->
-<!--endheader-->
 
-{% block content %}{% endblock %}
+<header>
+    <nav class="navbar navbar-light bg-light container">
+        <a class="navbar-brand logo-top" href="#">
+            <img src="{% static 'img/Logo.png' %}" width="40" height="40" class="d-inline-block align-top" alt=""
+                 loading="lazy">
+            Brand Name
+        </a>
+        <div class="contact-top">
+            <a class="whatsapp-number" href="https://web.whatsapp.com/">
+                <img src="{% static 'img/wa-image-color.png' %}" alt="whatsapp-number">
+            </a>
+            <a class="telegram-number" href="https://t.me/">
+                <img src="{% static 'img/tg-image-color.png' %}" alt="telegram-number">
+            </a>
+            <a class="phone-number text-dark" href="tel:+380997894563">
+                <h5>+380(99)-789-45-63</h5></a>
+        </div>
+    </nav>
+</header>
 
-<!--footer-->
-<!--endfooter-->
+{% block index %}{% endblock %}
+
+{% block thanks %}{% endblock %}
+
+<footer>
+    <div class="container">
+        <nav class="navbar navbar-light bg-light container">
+            <a class="navbar-brand logo-top" href="#">
+                <img src="{% static 'img/Logo.png' %}" width="40" height="40" class="d-inline-block align-top" alt=""
+                     loading="lazy">
+                Brand Name
+            </a>
+            <div class="contact-top">
+                <a class="whatsapp-number" href="https://web.whatsapp.com/">
+                    <img src="{% static 'img/wa-image-color.png' %}" alt="whatsapp-number">
+                </a>
+                <a class="telegram-number" href="https://t.me/">
+                    <img src="{% static 'img/tg-image-color.png' %}" alt="telegram-number">
+                </a>
+                <a class="telegram-number" href="tel:+380997894563">
+                    <img src="{% static 'img/phone.png' %}" height="50px">
+                </a>
+            </div>
+        </nav>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
 </body>
 </html>

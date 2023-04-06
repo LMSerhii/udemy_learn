@@ -212,3 +212,5 @@ ENV/
 /site
 
 # End of https://www.gitignore.io/api/macos,linux,django,python,pycharm
+/telebot/auth_telegram.py
+/telebot/auth_telegram.py
